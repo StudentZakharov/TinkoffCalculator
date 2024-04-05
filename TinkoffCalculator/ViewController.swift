@@ -42,6 +42,7 @@ enum CalculationHistoryItem {
 
 class ViewController: UIViewController {
    
+    var lastResult: String? = nil
     
     @IBAction func buttonPressed(_ sender: UIButton) {
         guard let buttonText=sender.currentTitle else {return}
@@ -93,12 +94,15 @@ class ViewController: UIViewController {
             label.text = numberFormatter.string(from: NSNumber(value: result))
         } catch {label.text = "Ошибка"}
         calculationHistory.removeAll()
+        lastResult=label.text
     }
     
     
     @IBOutlet weak var label: UILabel!
     
     var calculationHistory: [CalculationHistoryItem]=[]
+    
+    
     
     lazy var numberFormatter: NumberFormatter={
        let numberFormatter=NumberFormatter()
@@ -109,6 +113,39 @@ class ViewController: UIViewController {
         
         return numberFormatter
     }()
+    
+    
+    
+    @IBAction func showCalculationsList(_ sender: Any) {
+        let sb = UIStoryboard(name: "Main", bundle: nil)
+        let CalculatonsListVC = sb.instantiateViewController(identifier: "CalculatonsListViewController")
+        
+        if let vc=CalculatonsListVC as? CalculationsListViewController {
+            
+            if lastResult == nil {
+                vc.result = "NoData"
+            }
+            else{
+                vc.result = lastResult
+            }
+                        
+        }
+        
+        //show(CalculatonsListVC, sender: self)
+        navigationController?.pushViewController(CalculatonsListVC, animated: true)
+    }
+    
+    /*
+    @IBAction func unwindAction(unwindSegue: UIStoryboardSegue)
+    {
+    }
+        
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard segue.identifier=="CALCULATIONS_LIST",
+                let calculationListVC=segue.destination as? CalculationsListViewController else {return}
+        calculationListVC.result = label.text
+    }
+    */
     
     func calculate() throws -> Double{
         
@@ -138,7 +175,11 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         resetLabelText()
-        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.setNavigationBarHidden(true, animated: false)
     }
 
     

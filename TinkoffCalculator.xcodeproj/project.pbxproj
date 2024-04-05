@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		605064612BB31BC8003B2734 /* CalculationsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 605064602BB31BC8003B2734 /* CalculationsListViewController.swift */; };
 		6066F5702BA973CB0028DFB1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6066F56F2BA973CB0028DFB1 /* AppDelegate.swift */; };
 		6066F5722BA973CB0028DFB1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6066F5712BA973CB0028DFB1 /* SceneDelegate.swift */; };
 		6066F5742BA973CB0028DFB1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6066F5732BA973CB0028DFB1 /* ViewController.swift */; };
@@ -36,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		605064602BB31BC8003B2734 /* CalculationsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculationsListViewController.swift; sourceTree = "<group>"; };
 		6066F56C2BA973CB0028DFB1 /* TinkoffCalculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TinkoffCalculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6066F56F2BA973CB0028DFB1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6066F5712BA973CB0028DFB1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -106,6 +108,7 @@
 				6066F5782BA973CC0028DFB1 /* Assets.xcassets */,
 				6066F57A2BA973CC0028DFB1 /* LaunchScreen.storyboard */,
 				6066F57D2BA973CC0028DFB1 /* Info.plist */,
+				605064602BB31BC8003B2734 /* CalculationsListViewController.swift */,
 			);
 			path = TinkoffCalculator;
 			sourceTree = "<group>";
@@ -259,6 +262,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6066F5742BA973CB0028DFB1 /* ViewController.swift in Sources */,
+				605064612BB31BC8003B2734 /* CalculationsListViewController.swift in Sources */,
 				6066F5702BA973CB0028DFB1 /* AppDelegate.swift in Sources */,
 				6066F5722BA973CB0028DFB1 /* SceneDelegate.swift in Sources */,
 			);
