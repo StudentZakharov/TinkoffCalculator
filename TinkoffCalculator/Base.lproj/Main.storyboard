@@ -219,6 +219,9 @@
                                 <buttonConfiguration key="configuration" style="plain">
                                     <imageReference key="image" image="clock" catalog="system" symbolScale="large"/>
                                 </buttonConfiguration>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="accessibilityIdentifier" value="historyButton"/>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="showCalculationsList:" destination="BYZ-38-t0r" eventType="touchUpInside" id="81k-0o-HDe"/>
                                 </connections>
